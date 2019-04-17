@@ -1,0 +1,23 @@
+<h1>Products</h1>
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Price</th>
+		<th>Quantity</th>
+	</tr>
+	<tbody>
+		<% @products.each do |p| %>
+			<tr>
+				<td><%= p.name %>
+				</td>
+				<td><%= number_to_currency(p.price) %></td>
+				<td><%= p.quantity %></td>
+			</tr>
+		<% end %>
+
+	</tbody>
+</table>
+
+<%= link_to "Return to Index", root_path %>
+

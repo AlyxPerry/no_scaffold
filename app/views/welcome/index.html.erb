@@ -1,0 +1,22 @@
+<h1>Create a User</h1>
+
+<%= form_with(url: create_users_path) do |f| %>
+	<%= text_field_tag :name, nil, placeholder: "Your Name" %><br>
+	<%= number_field_tag :age, nil, placeholder: "Your Age" %><br>
+	<%= submit_tag "Create Profile" %>
+
+<% end %>
+
+
+<br>
+<br>
+
+<h3>Create a Product</h3>
+<%= form_with(model: @product) do |f| %>
+		<%= f.text_field :name, placeholder: "Name" %><br>
+		<%= f.number_field :price, placeholder: "Price" %><br>
+		<%= f.number_field :quantity, placeholder: "Quantity" %><br>
+		<%= text_field_tag :name, nil, placeholder: "Your Name" %><br>
+		<%= number_field_tag :age, nil, placeholder: "Your Age" %><br>
+		<%= submit_tag "Create Product" %>
+<% end %>
